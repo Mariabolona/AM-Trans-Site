@@ -37,7 +37,7 @@ html { scroll-behavior: smooth; }
 }
 
 .brand img {
-  height: 54px;  /* bigger logo */
+  height: 48px;  /* bigger logo */
   width: auto;
   display: block;
 }
@@ -149,17 +149,32 @@ html { scroll-behavior: smooth; }
   overflow: hidden;
   background: #000;
 }
-
+.hero-video::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    #000 100%
+  );
+  pointer-events: none;
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
     rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.55) 55%,
-    rgba(0,0,0,0.65) 100%
+    rgba(0,0,0,0.45) 45%,
+    rgba(0,0,0,0.35) 65%,
+    rgba(0,0,0,0.70) 100%
   );
 }
+
 
 .hero-center {
   text-align: center;
@@ -169,7 +184,7 @@ html { scroll-behavior: smooth; }
   position: relative;
   z-index: 2;
   color: #fff;
-  padding: 86px 0;
+  padding: 64px 0 96px; /* top, bottom */
 }
 
 .hero-content h1 {
@@ -197,7 +212,7 @@ html { scroll-behavior: smooth; }
 
 .btn.red:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(225, 27, 34, 0.28);
+  box-shadow: 0 18px 40px rgba(225, 27, 34, 0.35);
 }
 
 .btn.outline {
@@ -238,7 +253,7 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 10px 0;
   gap: 16px;
 }
 
@@ -358,8 +373,9 @@ html { scroll-behavior: smooth; }
   display: inline-block;
   padding: 12px 16px;
   border-radius: 12px;
-  font-weight: 700;
+  font-weight: 800;
   border: 1px solid #111;
+  letter-spacing: 0.02em;
 }
 
 .btn.primary { background: #111; color: #fff; }
