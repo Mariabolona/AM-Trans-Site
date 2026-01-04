@@ -294,6 +294,38 @@ html { scroll-behavior: smooth; }
   transform: translateY(-2px);
   box-shadow: 0 16px 34px rgba(0,0,0,0.28);
 }
+/* ===== Fun but Professional Button Delight ===== */
+.btn {
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* subtle shine sweep */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.25),
+    transparent 70%
+  );
+  transition: transform 500ms ease;
+}
+
+/* hover behavior */
+.btn:hover::after {
+  transform: translateX(200%);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
 
 /* ===== Sections / Content ===== */
 .section { padding: 56px 0; }
@@ -343,6 +375,23 @@ html { scroll-behavior: smooth; }
 .stat span {
   opacity: 0.85;
   font-size: 14px;
+}
+/* ===== Stats Micro Fun ===== */
+.stat {
+  transition: transform 200ms ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+}
+
+.stat strong {
+  position: relative;
+}
+
+/* glow when animation finishes */
+.stat strong.done {
+  text-shadow: 0 0 18px rgba(140, 190, 255, 0.45);
 }
 
 /* ===== Footer ===== */
