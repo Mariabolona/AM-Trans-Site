@@ -326,6 +326,174 @@ html { scroll-behavior: smooth; }
 .btn:hover {
   transform: translateY(-3px);
 }
+/* ===== Our Company (reference-style) ===== */
+.company {
+  padding: 70px 0 60px;
+  background: radial-gradient(1200px 600px at 25% 20%, rgba(255,255,255,0.06), transparent 55%),
+              linear-gradient(180deg, #061b33 0%, #031427 100%);
+  color: #fff;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 38px;
+  padding-bottom: 34px;
+  position: relative;
+}
+
+.company-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.15;
+}
+
+.company-copy p {
+  margin: 12px 0 18px;
+  max-width: 52ch;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* stars + lines */
+.company-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 6px;
+}
+
+.rating-line {
+  width: 44px;
+  height: 2px;
+  background: rgba(225, 27, 34, 0.9);
+  border-radius: 999px;
+}
+
+.stars {
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.company-cta {
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+
+/* media block with wave backdrop */
+.company-media {
+  position: relative;
+  display: grid;
+  justify-items: end;
+}
+
+/* wavy line background (no extra image needed) */
+.company-media::before {
+  content: "";
+  position: absolute;
+  inset: -40px -10px -40px -60px;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(225,27,34,0.22), transparent 55%),
+    repeating-linear-gradient(
+      120deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+  mask-image: radial-gradient(circle at 60% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* your single collage image */
+.company-image {
+  width: min(520px, 100%);
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+
+/* divider + capabilities */
+.company-divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+
+.company-divider h3 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  opacity: 0.95;
+}
+
+.company-divider .line {
+  height: 1px;
+  flex: 1;
+  background: rgba(255,255,255,0.22);
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cap-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cap-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 54px rgba(0,0,0,0.28);
+}
+
+.cap-card h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.cap-card p {
+  margin: 0;
+  color: rgba(255,255,255,0.82);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .company-media {
+    justify-items: start;
+  }
+
+  .company-image {
+    width: 100%;
+  }
+
+  .cap-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ===== Sections / Content ===== */
 .section { padding: 56px 0; }
