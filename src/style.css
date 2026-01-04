@@ -397,44 +397,27 @@ html { scroll-behavior: smooth; }
   padding: 12px 18px;
 }
 
-/* media block with wave backdrop */
-.company-media {
-  position: relative;
-  display: grid;
-  justify-items: end;
-}
-
-/* wavy line background (no extra image needed) */
+/* Kill the generated wave/lines background (you already have it in the collage image) */
 .company-media::before {
-  content: "";
-  position: absolute;
-  inset: -40px -40px -40px -40px;
-
-  background:
-    radial-gradient(circle at 30% 40%, rgba(225,27,34,0.22), transparent 55%),
-    repeating-linear-gradient(
-      120deg,
-      rgba(255,255,255,0.08) 0px,
-      rgba(255,255,255,0.08) 1px,
-      transparent 1px,
-      transparent 7px
-    );
-
-  opacity: 0.55;
-  pointer-events: none;
-
-  /* KEY: turns the rectangle into a soft blob */
-  border-radius: 999px;
-  filter: blur(0.2px);
-  clip-path: ellipse(60% 42% at 60% 50%);
+  content: none !important;
+  display: none !important;
 }
+
+/* Kill any frame / glass panel behind the image */
+.company-media {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
 /* your single collage image */
 .company-image {
-  width: min(520px, 100%);
+  width: min(720px, 120%);
   height: auto;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
 }
 
 /* divider + capabilities */
