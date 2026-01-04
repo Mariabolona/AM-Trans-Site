@@ -351,6 +351,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .company-media::before { content: none; display: none; }
+.company-media::before,
+.company-media::after {
+  content: none !important;
+  display: none !important;
+}
 
 .company-image {
   width: min(720px, 120%);
@@ -362,6 +367,19 @@ a { color: inherit; text-decoration: none; }
 
   border-radius: 18px;
   box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+.company-media,
+.company-media * {
+  background: transparent !important;
+}
+
+.company-media {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  border-radius: 0 !important;
 }
 
 /* Divider + capabilities */
