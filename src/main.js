@@ -54,17 +54,20 @@ const counterObserver = new IntersectionObserver(
       if (!entry.isIntersecting) return;
 
       const el = entry.target;
-      const target = +el.dataset.count;
+      const target = Number(el.dataset.count || 0);
+      const suffix = el.dataset.suffix || "";
       let current = 0;
 
       const increment = Math.max(1, Math.floor(target / 80));
 
       const update = () => {
         current += increment;
+
         if (current >= target) {
-          el.textContent = target;
+          el.textContent = `${target}${suffix}`;
+          el.classList.add("done"); // triggers glow in CSS
         } else {
-          el.textContent = current;
+          el.textContent = `${current}${suffix}`;
           requestAnimationFrame(update);
         }
       };
