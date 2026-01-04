@@ -408,7 +408,8 @@ html { scroll-behavior: smooth; }
 .company-media::before {
   content: "";
   position: absolute;
-  inset: -40px -10px -40px -60px;
+  inset: -40px -40px -40px -40px;
+
   background:
     radial-gradient(circle at 30% 40%, rgba(225,27,34,0.22), transparent 55%),
     repeating-linear-gradient(
@@ -418,11 +419,15 @@ html { scroll-behavior: smooth; }
       transparent 1px,
       transparent 7px
     );
-  mask-image: radial-gradient(circle at 60% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+
   opacity: 0.55;
   pointer-events: none;
-}
 
+  /* KEY: turns the rectangle into a soft blob */
+  border-radius: 999px;
+  filter: blur(0.2px);
+  clip-path: ellipse(60% 42% at 60% 50%);
+}
 /* your single collage image */
 .company-image {
   width: min(520px, 100%);
@@ -496,12 +501,29 @@ html { scroll-behavior: smooth; }
   }
 
   .company-media {
-    justify-items: start;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* allows the image to breathe */
+  min-height: 420px;
+}
 
   .company-image {
-    width: 100%;
-  }
+  width: 120%;          /*  THIS makes it bigger */
+  max-width: 720px;     /* prevents it from going insane on large screens */
+  height: auto;
+
+  border-radius: 22px;
+  object-fit: contain;
+
+  /* subtle lift */
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+
+  position: relative;
+  z-index: 2;
+}
 
   .cap-grid {
     grid-template-columns: 1fr;
@@ -640,7 +662,10 @@ p, span, li {
   .nav-pill { display: none; }
   .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
   .brand img { height: 44px; }
-
+  .company-image {
+    width: 100%;
+    max-width: 100%;
+  }
   .grid { grid-template-columns: 1fr; }
 
   .hero-video { min-height: 480px; }
