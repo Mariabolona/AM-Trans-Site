@@ -628,6 +628,140 @@ p, span, li { color: var(--navy-muted); }
 }
 
 .drivers-steps li { margin: 8px 0; }
+/* ===== Services (Enterprise upgrade) ===== */
+.section-head {
+  max-width: 78ch;
+}
+
+.section-sub {
+  margin: 10px 0 0;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Make services grid a bit “bigger client” feeling */
+.services-grid {
+  margin-top: 18px;
+}
+
+.services-grid .card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle highlight glow (not cheesy) */
+.services-grid .card::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    420px 220px at 20% 0%,
+    rgba(225, 27, 34, 0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.services-grid .card:hover::after {
+  opacity: 1;
+}
+
+/* "How it works" card */
+.services-how {
+  margin-top: 16px;
+}
+
+.services-how h3 {
+  margin: 0 0 10px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.how-step {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.how-step strong {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.how-step span {
+  display: block;
+  color: rgba(255,255,255,0.78);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* Industry chips row */
+.services-chips {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.services-chips span {
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.services-chips span:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.10);
+}
+
+/* CTA bar inside services */
+.services-cta {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.services-cta h3 {
+  margin: 0 0 6px;
+}
+
+.services-cta p {
+  margin: 0;
+  color: rgba(255,255,255,0.82);
+  font-weight: 600;
+  font-size: 13px;
+  max-width: 62ch;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 /* CTA */
 .drivers-cta {
