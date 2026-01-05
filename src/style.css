@@ -177,6 +177,9 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   display: grid;
   align-items: center;
+
+  /* ✅ Desktop spacing so Our Company feels larger (not just on mobile) */
+  margin-bottom: 50px;
 }
 
 .hero-bg {
@@ -297,6 +300,11 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
 }
 
+/* ✅ Make ONLY this section feel more premium/wide like your reference */
+.company .container {
+  width: min(1280px, calc(100% - 32px));
+}
+
 .company-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -357,8 +365,9 @@ a { color: inherit; text-decoration: none; }
   display: none !important;
 }
 
+/* ✅ Bigger collage presence = closer to your screenshot reference */
 .company-image {
-  width: min(720px, 120%);
+  width: min(860px, 130%);
   height: auto;
   display: block;
 
@@ -883,7 +892,7 @@ p, span, li { color: var(--navy-muted); }
   .brand img { height: 44px; }
 
   .hero-video { min-height: 480px; }
-  .hero-video {margin-bottom: 40px;}
+  .hero-video { margin-bottom: 40px; }
   .hero-content { padding: 44px 0 72px; }
   .hero-content h1 { font-size: clamp(30px, 8vw, 44px); }
   .hero-sub { font-size: 13px; }
