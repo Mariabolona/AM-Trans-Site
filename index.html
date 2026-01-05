@@ -56,9 +56,9 @@
     </header>
 
     <main id="top">
-      <!-- ===== Hero Video ===== -->
+      <!-- ===== HERO ===== -->
       <section class="hero-video reveal">
-        <div class="hero-media" aria-hidden="true">
+        <div class="hero-media">
           <video class="hero-bg" autoplay muted loop playsinline preload="metadata">
             <source src="/hero.mp4" type="video/mp4" />
           </video>
@@ -73,13 +73,13 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn red" href="#contact">Get a Rate Quote</a>
-            <a class="btn outline" href="#drivers">Become a Driver</a>
+            <a class="btn primary red" href="#contact">Get a Rate Quote</a>
+            <a class="btn secondary outline" href="#drivers">Become a Driver</a>
           </div>
         </div>
       </section>
 
-      <!-- ===== Our Company ===== -->
+      <!-- ===== OUR COMPANY ===== -->
       <section id="about" class="company reveal">
         <div class="container company-grid">
           <div class="company-copy">
@@ -129,7 +129,7 @@
         </div>
       </section>
 
-      <!-- ===== Stats ===== -->
+      <!-- ===== STATS ===== -->
       <section class="stats reveal">
         <div class="container">
           <div class="stats-grid">
@@ -153,83 +153,135 @@
         </div>
       </section>
 
-      <!-- ===== Services ===== -->
+      <!-- ===== SERVICES (PREMIUM) ===== -->
       <section id="services" class="section reveal">
-  <div class="container">
-    <div class="section-head">
-      <h2>Our Services</h2>
-      <p class="section-sub">
-        Heavy haul and specialized freight—planned, permitted, and executed with professional dispatch.
-        We handle the details so your project stays on schedule.
-      </p>
-    </div>
+        <div class="container">
+          <div class="section-head">
+            <h2>Our Services</h2>
+            <p class="section-sub">
+              Heavy haul and specialized freight—planned, permitted, and executed with precision.
+              We handle the details so your project stays on schedule.
+            </p>
+          </div>
 
-    <div class="grid services-grid">
-      <article class="card">
-        <h3>Heavy Haul / Oversize</h3>
-        <p>Specialized equipment moves with securement, compliance, and safety-first execution.</p>
-      </article>
+          <!-- Cinematic image divider -->
+          <div class="services-photo" aria-hidden="true">
+            <img src="/trucks.jpg" alt="" loading="lazy" />
+          </div>
 
-      <article class="card">
-        <h3>Permits & Route Planning</h3>
-        <p>Route surveys, restrictions, and permit coordination to keep your move legal and efficient.</p>
-      </article>
+          <!-- Capability lanes -->
+          <div class="services-lanes">
+            <div class="services-lane">
+              <div class="lane-head">
+                <span class="lane-kicker">Core Transport</span>
+                <h3 class="lane-title">Move the Load</h3>
+              </div>
 
-      <article class="card">
-        <h3>Escort Coordination</h3>
-        <p>Pilot cars and coordination support based on route requirements and load specs.</p>
-      </article>
+              <div class="service-item">
+                <h4>Heavy Haul / Oversize</h4>
+                <p>Specialized equipment moves executed with safety-first control and professional dispatch.</p>
+              </div>
 
-      <article class="card">
-        <h3>Rigging & Lift Support</h3>
-        <p>Coordination with qualified partners for complex loading, unloading, and site constraints.</p>
-      </article>
+              <div class="service-item">
+                <h4>High-Value / Time-Critical</h4>
+                <p>Clear communication and reliable execution when timing and accountability matter.</p>
+              </div>
+            </div>
 
-      <article class="card">
-        <h3>Dedicated / Contract Capacity</h3>
-        <p>Consistent lanes and planned capacity for repeat customers and project freight.</p>
-      </article>
+            <div class="services-lane">
+              <div class="lane-head">
+                <span class="lane-kicker">Planning &amp; Compliance</span>
+                <h3 class="lane-title">Plan It Right</h3>
+              </div>
 
-      <article class="card">
-        <h3>High-Value / Time-Critical</h3>
-        <p>Clear communication, professional dispatch, and reliable execution when timing matters.</p>
-      </article>
-    </div>
+              <div class="service-item">
+                <h4>Permits &amp; Route Planning</h4>
+                <p>Route surveys, restrictions, and coordination to keep your move legal and efficient.</p>
+              </div>
 
-    <div class="services-how card">
-      <h3>How it Works</h3>
-      <div class="how-grid">
-        <div class="how-step">
-          <strong>1) Send the load details</strong>
-          <span>Dims, weight, pickup/delivery, timeline</span>
+              <div class="service-item">
+                <h4>Escort Coordination</h4>
+                <p>Pilot cars and escort support aligned to route requirements and load specifications.</p>
+              </div>
+            </div>
+
+            <div class="services-lane">
+              <div class="lane-head">
+                <span class="lane-kicker">Project Support</span>
+                <h3 class="lane-title">Execute Clean</h3>
+              </div>
+
+              <div class="service-item">
+                <h4>Rigging &amp; Lift Support</h4>
+                <p>Coordination with qualified partners for complex loading, unloading, and site constraints.</p>
+              </div>
+
+              <div class="service-item">
+                <h4>Dedicated / Contract Capacity</h4>
+                <p>Consistent lanes and planned capacity for repeat customers and project freight.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- How it works (flow) -->
+          <div class="services-flow card">
+            <div class="flow-head">
+              <h3>How it Works</h3>
+              <p>Simple process. Professional execution. Clear updates from start to delivery.</p>
+            </div>
+
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="flow-num">1</div>
+                <div class="flow-body">
+                  <strong>Share load details</strong>
+                  <span>Dims, weight, pickup/delivery, timeline</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow" aria-hidden="true">→</div>
+
+              <div class="flow-step">
+                <div class="flow-num">2</div>
+                <div class="flow-body">
+                  <strong>We plan &amp; permit</strong>
+                  <span>Route, requirements, schedule, quote</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow" aria-hidden="true">→</div>
+
+              <div class="flow-step">
+                <div class="flow-num">3</div>
+                <div class="flow-body">
+                  <strong>Execute &amp; update</strong>
+                  <span>Dispatch, tracking, delivery confirmation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Industries (quiet flex) -->
+          <div class="services-industries">
+            <span class="industries-label">Industries Served:</span>
+            <span class="industries-list">Construction · Energy · Industrial · Manufacturing · Infrastructure</span>
+          </div>
+
+          <!-- Services CTA (calm authority) -->
+          <div class="services-cta card">
+            <div class="services-cta-copy">
+              <h3>Request a Quote</h3>
+              <p>
+                Have a complex move or ongoing capacity need? Send your load specs and timeline—our team will respond
+                quickly with a plan and pricing.
+              </p>
+            </div>
+            <a class="btn red" href="#contact">Get a Rate Quote</a>
+          </div>
         </div>
-        <div class="how-step">
-          <strong>2) We plan & permit</strong>
-          <span>Route, requirements, schedule, quote</span>
-        </div>
-        <div class="how-step">
-          <strong>3) Execute & update</strong>
-          <span>Dispatch, tracking, delivery confirmation</span>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="services-chips">
-      <span>Construction</span><span>Energy</span><span>Industrial</span>
-      <span>Manufacturing</span><span>Infrastructure</span>
-    </div>
-
-    <div class="services-cta card">
-      <div>
-        <h3>Request a Quote</h3>
-        <p>Send your load specs and timeline—our team will respond quickly with a plan and pricing.</p>
-      </div>
-      <a class="btn red" href="#contact">Get a Rate Quote</a>
-    </div>
-  </div>
-</section>
-
-      <!-- ===== Drivers ===== -->
+      <!-- ===== DRIVERS ===== -->
       <section id="drivers" class="section reveal">
         <div class="container">
           <div class="drivers-head">
@@ -276,19 +328,14 @@
               </div>
 
               <div class="drivers-badges">
-                <span title="Late-model &amp; reliable fleet">New Equipment</span>
-                <span title="Preventative programs + inspections">Preventative Maintenance</span>
-                <span title="Safety and compliance focused">Safety-Focused</span>
+                <span>New Equipment</span>
+                <span>Preventative Maintenance</span>
+                <span>Safety-Focused</span>
               </div>
             </div>
 
             <div class="drivers-hero-media">
-              <img
-                src="/driver-sec.jpg"
-                alt="AM Trans driver with heavy haul truck"
-                loading="lazy"
-              />
-              <p class="drivers-caption">Independent contractors operating our heavy haul equipment</p>
+              <img src="/driver-sec.jpg" alt="AM Trans driver with heavy haul truck" loading="lazy" />
             </div>
           </div>
 
@@ -325,17 +372,13 @@
           </div>
 
           <div class="drivers-cta">
-            <button class="btn red" type="button" data-open-modal="driverModal" data-topic="Driver Inquiry">
-              Driver Inquiries
-            </button>
-            <button class="btn outline" type="button" data-open-modal="driverModal" data-topic="Dispatch">
-              Talk to Dispatch
-            </button>
+            <a class="btn red" href="#contact">Driver Inquiries</a>
+            <a class="btn outline" href="#contact">Talk to Dispatch</a>
           </div>
         </div>
       </section>
 
-      <!-- ===== Resources ===== -->
+      <!-- ===== RESOURCES ===== -->
       <section id="resources" class="section alt reveal">
         <div class="container">
           <h2>Resources</h2>
@@ -343,7 +386,7 @@
         </div>
       </section>
 
-      <!-- ===== Reviews ===== -->
+      <!-- ===== REVIEWS ===== -->
       <section id="reviews" class="section alt reveal">
         <div class="container">
           <h2>What customers say</h2>
@@ -354,7 +397,7 @@
         </div>
       </section>
 
-      <!-- ===== Contact ===== -->
+      <!-- ===== CONTACT ===== -->
       <section id="contact" class="section reveal">
         <div class="container">
           <h2>Contact</h2>
@@ -362,94 +405,6 @@
         </div>
       </section>
     </main>
-
-    <!-- ===== Driver Inquiry Modal (Netlify-ready form) ===== -->
-    <div class="modal" id="driverModal" aria-hidden="true">
-      <div class="modal__backdrop" data-close-modal="driverModal"></div>
-
-      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="driverModalTitle">
-        <div class="modal__top">
-          <div>
-            <h3 id="driverModalTitle">Driver Inquiry</h3>
-            <p class="modal__sub">Independent contractor opportunities • Company-provided trucks</p>
-          </div>
-
-          <button class="modal__close" type="button" aria-label="Close" data-close-modal="driverModal">
-            ✕
-          </button>
-        </div>
-
-        <form
-          class="modal__form"
-          name="driver-inquiry"
-          method="POST"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="driver-inquiry" />
-
-          <div class="form-grid">
-            <label class="field">
-              <span>Topic</span>
-              <select name="topic" id="driverTopic" required>
-                <option>Driver Inquiry</option>
-                <option>Dispatch</option>
-              </select>
-            </label>
-
-            <label class="field">
-              <span>Name</span>
-              <input name="name" type="text" placeholder="Full name" required />
-            </label>
-
-            <label class="field">
-              <span>Email</span>
-              <input name="email" type="email" placeholder="name@email.com" required />
-            </label>
-
-            <label class="field">
-              <span>Phone</span>
-              <input name="phone" type="tel" placeholder="(000) 000-0000" />
-            </label>
-
-            <label class="field">
-              <span>State</span>
-              <input name="state" type="text" placeholder="IL, IN, etc." />
-            </label>
-
-            <label class="field">
-              <span>Experience</span>
-              <select name="experience" required>
-                <option value="" selected disabled>Select</option>
-                <option>1–2 years</option>
-                <option>3–5 years</option>
-                <option>6–10 years</option>
-                <option>10+ years</option>
-              </select>
-            </label>
-          </div>
-
-          <label class="field">
-            <span>Message</span>
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Tell us about your experience, endorsements, and preferred lanes…"
-              required
-            ></textarea>
-          </label>
-
-          <p class="fineprint">
-            By submitting, you acknowledge you operate as an <strong>independent contractor</strong>. AM Trans provides
-            company equipment and expects safety-first, professional standards.
-          </p>
-
-          <div class="modal__actions">
-            <button class="btn outline" type="button" data-close-modal="driverModal">Cancel</button>
-            <button class="btn red" type="submit">Send Inquiry</button>
-          </div>
-        </form>
-      </div>
-    </div>
 
     <footer class="site-footer">
       <div class="container">
