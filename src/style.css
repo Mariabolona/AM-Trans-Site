@@ -600,6 +600,42 @@ p, span, li { color: var(--navy-muted); }
     grid-template-columns: 1fr;
   }
 }
+/* Drivers hero split layout */
+.drivers-hero-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.drivers-hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drivers-hero-media img {
+  width: 100%;
+  max-width: 420px;   /* THIS is the key size */
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+
+  /* soft depth without square background */
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .drivers-hero-split {
+    grid-template-columns: 1fr;
+  }
+
+  .drivers-hero-media img {
+    max-width: 100%;
+    margin-top: 12px;
+  }
+}
 /* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid var(--navy-border);
