@@ -20,14 +20,25 @@
 
           <nav class="nav-pill" aria-label="Primary">
             <a href="#about">Our Company</a>
-            <a href="#services">Our Services</a>
+
+            <!-- Dropdown: Services -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Services <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Services menu">
+                <a role="menuitem" href="#heavy-haul">Heavy Haul</a>
+                <a role="menuitem" href="/rate-quote.html">Request a Rate Quote</a>
+              </div>
+            </div>
+
             <a href="#drivers">Drivers</a>
             <a href="#resources">Resources</a>
             <a href="#contact">Contact</a>
           </nav>
 
           <div class="header-actions">
-            <a class="cta-pill" href="#contact">Request a Quote</a>
+            <a class="cta-pill" href="/rate-quote.html">Request a Quote</a>
 
             <button
               class="menu-btn"
@@ -45,11 +56,12 @@
         <div class="mobile-menu" id="mobileMenu">
           <div class="container mobile-menu-inner">
             <a href="#about" class="mobile-link">Our Company</a>
-            <a href="#services" class="mobile-link">Our Services</a>
+            <a href="#heavy-haul" class="mobile-link">Heavy Haul</a>
+            <a href="/rate-quote.html" class="mobile-link">Request a Rate Quote</a>
             <a href="#drivers" class="mobile-link">Drivers</a>
             <a href="#resources" class="mobile-link">Resources</a>
             <a href="#contact" class="mobile-link">Contact</a>
-            <a href="#contact" class="cta-pill mobile-cta">Request a Quote</a>
+            <a href="/rate-quote.html" class="cta-pill mobile-cta">Request a Quote</a>
           </div>
         </div>
       </div>
@@ -73,7 +85,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary red" href="#contact">Get a Rate Quote</a>
+            <a class="btn primary red" href="/rate-quote.html">Get a Rate Quote</a>
             <a class="btn secondary outline" href="#drivers">Become a Driver</a>
           </div>
         </div>
@@ -96,7 +108,7 @@
               complex rigging operations, our team moves America’s toughest loads with confidence and care.
             </p>
 
-            <a class="btn red company-cta" href="#services">Our Services</a>
+            <a class="btn red company-cta" href="#heavy-haul">Explore Heavy Haul</a>
           </div>
 
           <div class="company-media">
@@ -148,6 +160,52 @@
             <div class="stat">
               <strong data-count="99" data-suffix="%">0</strong>
               <span>% On-Time Rate</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== HEAVY HAUL (OWN SECTION) ===== -->
+      <section id="heavy-haul" class="section reveal">
+        <div class="container">
+          <div class="heavyhaul-wrap">
+            <div class="heavyhaul-visual" aria-hidden="true">
+              <img src="/trucks.jpg" alt="" loading="lazy" />
+            </div>
+
+            <div class="heavyhaul-card card">
+              <div class="heavyhaul-head">
+                <span class="heavyhaul-kicker">Heavy Haul</span>
+                <h2>Oversize Moves, Executed With Control</h2>
+                <p class="section-sub">
+                  When the load is high-risk, high-value, or oversize, details matter. We coordinate route planning,
+                  permits, escort support, and professional dispatch—so your shipment arrives safely and on schedule.
+                </p>
+              </div>
+
+              <div class="heavyhaul-points">
+                <div class="heavyhaul-point">
+                  <span class="dot"></span>
+                  <span><strong>Route &amp; restriction planning</strong> for efficient execution</span>
+                </div>
+                <div class="heavyhaul-point">
+                  <span class="dot"></span>
+                  <span><strong>Permit + escort coordination</strong> aligned to your load specs</span>
+                </div>
+                <div class="heavyhaul-point">
+                  <span class="dot"></span>
+                  <span><strong>Clear communication</strong> and accountability from dispatch</span>
+                </div>
+                <div class="heavyhaul-point">
+                  <span class="dot"></span>
+                  <span><strong>Safety-first approach</strong> with professional operations</span>
+                </div>
+              </div>
+
+              <div class="heavyhaul-cta">
+                <a class="btn red" href="/rate-quote.html">Request a Rate Quote</a>
+                <a class="btn outline" href="#contact">Talk to Dispatch</a>
+              </div>
             </div>
           </div>
         </div>
@@ -276,7 +334,7 @@
                 quickly with a plan and pricing.
               </p>
             </div>
-            <a class="btn red" href="#contact">Get a Rate Quote</a>
+            <a class="btn red" href="/rate-quote.html">Get a Rate Quote</a>
           </div>
         </div>
       </section>

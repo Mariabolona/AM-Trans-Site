@@ -77,7 +77,8 @@ a { color: inherit; text-decoration: none; }
   border: 2px solid rgba(140, 190, 255, 0.55);
 }
 
-.nav-pill a {
+.nav-pill a,
+.nav-trigger {
   color: rgba(255,255,255,0.92);
   font-weight: 700;
   font-size: 14px;
@@ -86,10 +87,57 @@ a { color: inherit; text-decoration: none; }
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.nav-pill a:hover {
+.nav-pill a:hover,
+.nav-trigger:hover {
   background: rgba(255,255,255,0.12);
   color: #fff;
   transform: translateY(-1px);
+}
+
+/* ===== Dropdown (Services) ===== */
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-trigger {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+}
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(6, 27, 51, 0.98);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.45);
+  display: none;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 12px;
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.nav-menu a:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+.nav-dropdown:hover .nav-menu,
+.nav-dropdown:focus-within .nav-menu {
+  display: block;
 }
 
 .header-actions {
@@ -177,9 +225,6 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   display: grid;
   align-items: center;
-
-  /* ✅ Desktop spacing so Our Company feels larger (not just on mobile) */
-  margin-bottom: 50px;
 }
 
 .hero-bg {
@@ -300,11 +345,6 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
 }
 
-/* ✅ Make ONLY this section feel more premium/wide like your reference */
-.company .container {
-  width: min(1280px, calc(100% - 32px));
-}
-
 .company-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -365,9 +405,8 @@ a { color: inherit; text-decoration: none; }
   display: none !important;
 }
 
-/* ✅ Bigger collage presence = closer to your screenshot reference */
 .company-image {
-  width: min(860px, 130%);
+  width: min(720px, 120%);
   height: auto;
   display: block;
 
@@ -482,6 +521,81 @@ p, span, li { color: var(--navy-muted); }
 }
 
 .stat span { opacity: 0.85; font-size: 14px; }
+
+/* ===== Heavy Haul (own section) ===== */
+.heavyhaul-wrap {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.heavyhaul-visual {
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.35);
+}
+
+.heavyhaul-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95) contrast(1.05);
+  transform: scale(1.01);
+}
+
+.heavyhaul-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,27,51,0.70) 0%, rgba(6,27,51,0.15) 35%, rgba(6,27,51,0.40) 100%),
+    radial-gradient(900px 340px at 40% 10%, rgba(225,27,34,0.10), transparent 60%);
+  pointer-events: none;
+}
+
+.heavyhaul-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+
+.heavyhaul-head h2 {
+  margin: 8px 0 8px;
+  font-size: clamp(22px, 2.8vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+.heavyhaul-points {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.heavyhaul-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255,255,255,0.86);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.heavyhaul-cta {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 /* ===== Services (Premium lanes + cinematic image) ===== */
 .section-head {
@@ -744,7 +858,7 @@ p, span, li { color: var(--navy-muted); }
   line-height: 1.4;
 }
 
-.bullet .dot {
+.dot {
   width: 10px;
   height: 10px;
   border-radius: 999px;
@@ -900,19 +1014,21 @@ p, span, li { color: var(--navy-muted); }
   .company-grid { grid-template-columns: 1fr; gap: 22px; }
   .company-image { width: 100%; }
 
-  .grid { grid-template-columns: 1fr; }
-  .cap-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Heavy haul responsive */
+  .heavyhaul-wrap { grid-template-columns: 1fr; }
+  .heavyhaul-visual img { min-height: 240px; }
 
   /* Services responsive */
   .services-lanes { grid-template-columns: 1fr; }
   .flow-steps { grid-template-columns: 1fr; }
   .flow-arrow { display: none; }
+  .services-cta { flex-direction: column; align-items: flex-start; }
 
   /* Drivers responsive */
   .drivers-bullets { grid-template-columns: 1fr; }
   .drivers-split { grid-template-columns: 1fr; }
-
   .drivers-hero-split { grid-template-columns: 1fr; }
   .drivers-hero-media img { max-width: 100%; margin-top: 12px; }
 }
