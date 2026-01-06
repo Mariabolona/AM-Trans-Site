@@ -33,7 +33,8 @@ if (menuBtn && mobileMenu) {
 // ===== Mobile dropdowns =====
 const mobileTriggers = document.querySelectorAll('.mobile-trigger');
 mobileTriggers.forEach(trigger => {
-  trigger.addEventListener('click', () => {
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
     const submenu = trigger.nextElementSibling;
     const open = submenu.classList.toggle('open');
     trigger.classList.toggle('open', open);
