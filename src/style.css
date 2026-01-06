@@ -1390,4 +1390,7 @@ p, span, li { color: var(--navy-muted); }
   .drivers-split { grid-template-columns: 1fr; }
   .drivers-hero-split { grid-template-columns: 1fr; }
   .drivers-hero-media img { max-width: 100%; margin-top: 12px; }
+
+  /* Capabilities responsive */
+  .cap-grid { grid-template-columns: 1fr; }
 }
