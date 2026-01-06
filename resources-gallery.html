@@ -41,7 +41,16 @@
               </div>
             </div>
 
-            <a href="#drivers">Drivers</a>
+            <!-- Dropdown: Drivers -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Drivers <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Drivers menu">
+                <a role="menuitem" href="/#drivers">Overview</a>
+                <a role="menuitem" href="/driver-application.html">Driver Application</a>
+              </div>
+            </div>
 
             <!-- Dropdown: Resources -->
             <div class="nav-dropdown">
@@ -54,7 +63,16 @@
               </div>
             </div>
 
-            <a href="#contact">Contact</a>
+            <!-- Dropdown: Contact -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Contact <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Contact menu">
+                <a role="menuitem" href="/#contact">Overview</a>
+                <a role="menuitem" href="/contact-us.html">Contact Us</a>
+              </div>
+            </div>
           </nav>
 
           <div class="header-actions">
@@ -75,13 +93,55 @@
 
         <div class="mobile-menu" id="mobileMenu">
           <div class="container mobile-menu-inner">
-            <a href="/about-amtrans.html" class="mobile-link">About AmTrans</a>
-            <a href="#heavy-haul" class="mobile-link">Heavy Haul</a>
-            <a href="/rate-quote.html" class="mobile-link">Request a Rate Quote</a>
-            <a href="#drivers" class="mobile-link">Drivers</a>
-            <a href="/resources-gallery.html" class="mobile-link">Photo &amp; Video Gallery</a>
-            <a href="#resources" class="mobile-link">Resources</a>
-            <a href="#contact" class="mobile-link">Contact</a>
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Our Company <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/about-amtrans.html">About AmTrans</a>
+                <a href="#about">Overview</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Services <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="#heavy-haul">Heavy Haul</a>
+                <a href="/rate-quote.html">Request a Rate Quote</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Drivers <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/#drivers">Overview</a>
+                <a href="/driver-application.html">Driver Application</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Resources <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/resources-gallery.html">Photo &amp; Video Gallery</a>
+                <a href="#resources">Overview</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Contact <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/#contact">Overview</a>
+                <a href="/contact-us.html">Contact Us</a>
+              </div>
+            </div>
             <a href="/rate-quote.html" class="cta-pill mobile-cta">Request a Quote</a>
           </div>
         </div>

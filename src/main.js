@@ -20,9 +20,25 @@ if (menuBtn && mobileMenu) {
     if (target && target.matches("a")) {
       mobileMenu.classList.remove("open");
       menuBtn.setAttribute("aria-expanded", "false");
+      // Close all submenus
+      const mobileTriggers = document.querySelectorAll('.mobile-trigger');
+      mobileTriggers.forEach(trigger => {
+        trigger.classList.remove('open');
+        trigger.nextElementSibling.classList.remove('open');
+      });
     }
   });
 }
+
+// ===== Mobile dropdowns =====
+const mobileTriggers = document.querySelectorAll('.mobile-trigger');
+mobileTriggers.forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const submenu = trigger.nextElementSibling;
+    const open = submenu.classList.toggle('open');
+    trigger.classList.toggle('open', open);
+  });
+});
 
 // ===== Scroll reveal =====
 const revealEls = document.querySelectorAll(".reveal");

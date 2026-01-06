@@ -20,15 +20,132 @@
           </a>
 
           <nav class="nav-pill" aria-label="Primary">
-            <a href="/#about">Our Company</a>
-            <a href="/#services">Services</a>
-            <a href="/#drivers">Drivers</a>
-            <a href="/rate-quote.html">Request a Quote</a>
+            <!-- Dropdown: Our Company -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Our Company <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Our company menu">
+                <a role="menuitem" href="/about-amtrans.html">About AmTrans</a>
+                <a role="menuitem" href="/#about">Overview</a>
+              </div>
+            </div>
+
+            <!-- Dropdown: Services -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Services <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Services menu">
+                <a role="menuitem" href="/#heavy-haul">Heavy Haul</a>
+                <a role="menuitem" href="/rate-quote.html">Request a Rate Quote</a>
+              </div>
+            </div>
+
+            <!-- Dropdown: Drivers -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Drivers <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Drivers menu">
+                <a role="menuitem" href="/#drivers">Overview</a>
+                <a role="menuitem" href="/driver-application.html">Driver Application</a>
+              </div>
+            </div>
+
+            <!-- Dropdown: Resources -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Resources <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Resources menu">
+                <a role="menuitem" href="/resources-gallery.html">Photo &amp; Video Gallery</a>
+                <a role="menuitem" href="/#resources">Overview</a>
+              </div>
+            </div>
+
+            <!-- Dropdown: Contact -->
+            <div class="nav-dropdown">
+              <button class="nav-trigger" type="button" aria-haspopup="true">
+                Contact <span aria-hidden="true">▾</span>
+              </button>
+              <div class="nav-menu" role="menu" aria-label="Contact menu">
+                <a role="menuitem" href="/#contact">Overview</a>
+                <a role="menuitem" href="/contact-us.html">Contact Us</a>
+              </div>
+            </div>
           </nav>
 
           <div class="header-actions">
             <a class="cta-pill" href="/rate-quote.html">Request a Quote</a>
+
+            <button
+              class="menu-btn"
+              id="menuBtn"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+              type="button"
+            >
+              <span class="menu-lines" aria-hidden="true"></span>
+            </button>
           </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="container mobile-menu-inner">
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Our Company <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/about-amtrans.html">About AmTrans</a>
+                <a href="/#about">Overview</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Services <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/#heavy-haul">Heavy Haul</a>
+                <a href="/rate-quote.html">Request a Rate Quote</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Drivers <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/#drivers">Overview</a>
+                <a href="/driver-application.html">Driver Application</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Resources <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/resources-gallery.html">Photo &amp; Video Gallery</a>
+                <a href="/#resources">Overview</a>
+              </div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="mobile-trigger" type="button">
+                Contact <span aria-hidden="true">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                <a href="/#contact">Overview</a>
+                <a href="/contact-us.html">Contact Us</a>
+              </div>
+            </div>
+            <a href="/rate-quote.html" class="cta-pill mobile-cta">Request a Quote</a>
+          </div>
+        </div>
         </div>
       </div>
     </header>
@@ -41,7 +158,7 @@
         <div class="container hero-content hero-center">
           <h1>Request a Rate Quote</h1>
           <p class="hero-sub">
-            Tell us about your shipment and our team will follow up with a tailored solution.
+            Get a customized quote for your heavy haul or specialized transport needs. Our experts are ready to provide competitive rates and expert guidance.
           </p>
         </div>
       </section>
@@ -49,29 +166,172 @@
       <!-- Quote Intro -->
       <section class="section reveal">
         <div class="container section-head">
-          <h2>Heavy Haul Starts With the Right Details</h2>
+          <h2>Why Choose AM Trans for Your Heavy Haul Needs?</h2>
           <p class="section-sub">
-            Every move is different. Share what you know and we’ll take care of permits,
-            routing, equipment, and execution.
+            With over 20 years of experience in oversized and specialized transport, AM Trans delivers reliable, efficient solutions for businesses of all sizes. From single loads to complex multi-lane projects, we handle it all with precision and care.
           </p>
+        </div>
+
+        <div class="container">
+          <div class="grid">
+            <div class="card">
+              <h4>Expertise You Can Trust</h4>
+              <p>Our team has handled thousands of heavy haul shipments across the US, ensuring compliance with all regulations and safe delivery.</p>
+            </div>
+            <div class="card">
+              <h4>Competitive Pricing</h4>
+              <p>We offer transparent, competitive rates with no hidden fees. Get a detailed quote tailored to your specific requirements.</p>
+            </div>
+            <div class="card">
+              <h4>End-to-End Support</h4>
+              <p>From initial consultation to final delivery, our dedicated team provides ongoing support and real-time updates.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Placeholder for form -->
+      <!-- What to Expect -->
       <section class="section alt reveal">
-        <div class="container">
-          <div class="card">
-            <h3>Rate Quote Form</h3>
-            <p>
-              We’re finalizing our online quote form.
-              For now, please reach out directly and our team will respond promptly.
-            </p>
+        <div class="container section-head">
+          <h3>What to Expect When You Request a Quote</h3>
+          <p class="section-sub">
+            Our streamlined process ensures you get accurate pricing and expert advice quickly.
+          </p>
+        </div>
 
-            <p>
-              <strong>Email:</strong> info@amtrans.com<br />
-              <strong>Phone:</strong> (000) 000-0000
-            </p>
+        <div class="container">
+          <div class="grid">
+            <div class="card">
+              <h4>1. Quick Response</h4>
+              <p>Within 24 hours of your submission, our team will review your details and contact you for any clarifications.</p>
+            </div>
+            <div class="card">
+              <h4>2. Detailed Assessment</h4>
+              <p>We evaluate route options, permit requirements, and equipment needs to provide the most efficient solution.</p>
+            </div>
+            <div class="card">
+              <h4>3. Customized Quote</h4>
+              <p>Receive a comprehensive quote including all costs, timelines, and terms. No surprises, just clear pricing.</p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Quote Form -->
+      <section class="section reveal">
+        <div class="container">
+          <h2>Request Your Quote</h2>
+          <p>Fill out the form below with as many details as possible. The more information you provide, the more accurate our quote will be.</p>
+
+          <form action="mailto:maria_bolona@yahoo.com" method="post" enctype="text/plain" class="quote-form">
+            <div class="form-section">
+              <h3>Contact Information</h3>
+              <div class="form-group">
+                <label for="company">Company Name *</label>
+                <input type="text" id="company" name="company" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact_name">Contact Name *</label>
+                <input type="text" id="contact_name" name="contact_name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="job_title">Job Title</label>
+                <input type="text" id="job_title" name="job_title">
+              </div>
+
+              <div class="form-group">
+                <label for="contact_number">Contact Number *</label>
+                <input type="tel" id="contact_number" name="contact_number" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact_email">Contact Email *</label>
+                <input type="email" id="contact_email" name="contact_email" required>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Rate Quote Details</h3>
+
+              <div class="form-group">
+                <label>Have you worked with AM Trans before? *</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="worked_before" value="Yes" required> Yes</label>
+                  <label><input type="radio" name="worked_before" value="No" required> No</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="role">Your role in the shipment *</label>
+                <select id="role" name="role" required>
+                  <option value="">Select your role</option>
+                  <option value="I am the Shipper">I am the Shipper</option>
+                  <option value="I am the Receiver">I am the Receiver</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="trailer_type">Trailer Type Needed</label>
+                <input type="text" id="trailer_type" name="trailer_type">
+              </div>
+
+              <div class="form-group">
+                <label>Load Type *</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="load_type" value="One-off / Single Load"> One-off / Single Load</label>
+                  <label><input type="checkbox" name="load_type" value="Single Lane"> Single Lane</label>
+                  <label><input type="checkbox" name="load_type" value="RFQ / Multiple Lanes"> RFQ / Multiple Lanes</label>
+                  <label><input type="checkbox" name="load_type" value="Project / Temporary Load"> Project / Temporary Load</label>
+                  <label><input type="checkbox" name="load_type" value="Other"> Other</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="origin_zip">Origin (From) Postal/Zip Code *</label>
+                <input type="text" id="origin_zip" name="origin_zip" required>
+              </div>
+
+              <div class="form-group">
+                <label for="destination_zip">Destination (To) Postal/Zip Code *</label>
+                <input type="text" id="destination_zip" name="destination_zip" required>
+              </div>
+
+              <div class="form-group">
+                <label for="commodity">Commodity *</label>
+                <input type="text" id="commodity" name="commodity" required>
+              </div>
+
+              <div class="form-group">
+                <label for="weight">Weight (Approx.) *</label>
+                <input type="text" id="weight" name="weight" required>
+              </div>
+
+              <div class="form-group">
+                <label for="dimensions">Dimensions (L x W x H)</label>
+                <input type="text" id="dimensions" name="dimensions">
+              </div>
+
+              <div class="form-group">
+                <label for="order_value">Order Value</label>
+                <input type="text" id="order_value" name="order_value">
+              </div>
+
+              <div class="form-group">
+                <label for="standard_instructions">Standard Instructions</label>
+                <textarea id="standard_instructions" name="standard_instructions" rows="4"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="special_instructions">Special Instructions</label>
+                <textarea id="special_instructions" name="special_instructions" rows="4"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn red">Submit Quote Request</button>
+          </form>
         </div>
       </section>
     </main>

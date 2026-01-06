@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About AmTrans</title>
+    <title>Contact Us - AM Trans</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
 
   <body>
@@ -26,7 +27,7 @@
               </button>
               <div class="nav-menu" role="menu" aria-label="Our company menu">
                 <a role="menuitem" href="/about-amtrans.html">About AmTrans</a>
-                <a role="menuitem" href="#about">Overview</a>
+                <a role="menuitem" href="/#about">Overview</a>
               </div>
             </div>
 
@@ -36,7 +37,7 @@
                 Services <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Services menu">
-                <a role="menuitem" href="#heavy-haul">Heavy Haul</a>
+                <a role="menuitem" href="/#heavy-haul">Heavy Haul</a>
                 <a role="menuitem" href="/rate-quote.html">Request a Rate Quote</a>
               </div>
             </div>
@@ -59,7 +60,7 @@
               </button>
               <div class="nav-menu" role="menu" aria-label="Resources menu">
                 <a role="menuitem" href="/resources-gallery.html">Photo &amp; Video Gallery</a>
-                <a role="menuitem" href="#resources">Overview</a>
+                <a role="menuitem" href="/#resources">Overview</a>
               </div>
             </div>
 
@@ -99,7 +100,7 @@
               </button>
               <div class="mobile-submenu">
                 <a href="/about-amtrans.html">About AmTrans</a>
-                <a href="#about">Overview</a>
+                <a href="/#about">Overview</a>
               </div>
             </div>
 
@@ -108,7 +109,7 @@
                 Services <span aria-hidden="true">▾</span>
               </button>
               <div class="mobile-submenu">
-                <a href="#heavy-haul">Heavy Haul</a>
+                <a href="/#heavy-haul">Heavy Haul</a>
                 <a href="/rate-quote.html">Request a Rate Quote</a>
               </div>
             </div>
@@ -129,7 +130,7 @@
               </button>
               <div class="mobile-submenu">
                 <a href="/resources-gallery.html">Photo &amp; Video Gallery</a>
-                <a href="#resources">Overview</a>
+                <a href="/#resources">Overview</a>
               </div>
             </div>
 
@@ -142,47 +143,83 @@
                 <a href="/contact-us.html">Contact Us</a>
               </div>
             </div>
-            <a href="/rate-quote.html" class="cta-pill mobile-cta">Request a Quote</a>
+
+            <div class="mobile-cta">
+              <a class="cta-pill" href="/rate-quote.html">Request a Quote</a>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="company-single container">
-        <h1>About AmTrans</h1>
-        <div class="page-ribbon">Dependable Heavy Haul &amp; Specialized Transport</div>
+      <section class="company-single">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>Get in touch with AM Trans for all your heavy haul and specialized transport needs. We're here to help with quotes, questions, and project planning.</p>
 
-        <p>
-          AM Trans delivers precision, power, and reliability across every mile. From oversized freight to
-          complex rigging operations, our team moves America’s toughest loads with confidence and care.
-        </p>
+          <div class="contact-info">
+            <h2>Our Information</h2>
+            <p><strong>Phone:</strong> (###) ###-####</p>
+            <p><strong>Email:</strong> info@amtrans.com</p>
+            <p><strong>Address:</strong> [Your Address Here]</p>
+            <p><strong>Hours:</strong> Monday - Friday, 8 AM - 5 PM EST</p>
+          </div>
 
-        <h2>Who we are</h2>
-        <p>
-          We are a specialized transport company focusing on oversized and high-value freight. Our team handles
-          permits, route planning, escort coordination, and professional dispatch to ensure timely and safe
-          delivery for every project.
-        </p>
+          <h2>Send Us a Message</h2>
+          <form action="mailto:maria_bolona@yahoo.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" required>
+            </div>
 
-        <h3>Our Capabilities</h3>
-        <ul>
-          <li>Heavy Haul / Oversize freight</li>
-          <li>Specialized Transport &amp; Rigging Support</li>
-          <li>Permit, route, and escort coordination</li>
-          <li>Dedicated and project-based capacity</li>
-        </ul>
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname" required>
+            </div>
 
-        <a class="btn red" href="/rate-quote.html">Request a Rate Quote</a>
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label>Reason for Contact</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="reason" value="Freight services"> Freight Services</label>
+                <label><input type="checkbox" name="reason" value="Load questions"> Load Questions</label>
+                <label><input type="checkbox" name="reason" value="Heavy haul project"> Heavy Haul Project</label>
+                <label><input type="checkbox" name="reason" value="Other"> Other</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn red">Submit</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> AM Trans. All rights reserved.</p>
+        <p>&copy; 2024 AM Trans. All rights reserved.</p>
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <script src="/src/main.js"></script>
   </body>
 </html>
