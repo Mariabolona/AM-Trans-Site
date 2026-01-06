@@ -126,3 +126,79 @@ document.addEventListener("keydown", (e) => {
   const open = document.querySelector(".modal.is-open");
   if (open) closeModal(open.id);
 });
+
+// ===== Gallery lightbox =====
+function createLightbox() {
+  if (document.querySelector('.lightbox')) return document.querySelector('.lightbox');
+
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.setAttribute('aria-hidden', 'true');
+
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'lightbox-close';
+  closeBtn.type = 'button';
+  closeBtn.textContent = 'Close';
+
+  const content = document.createElement('div');
+  content.className = 'lightbox-content';
+
+  lb.appendChild(content);
+  lb.appendChild(closeBtn);
+  document.body.appendChild(lb);
+
+  // Close handlers
+  closeBtn.addEventListener('click', () => closeLightbox(lb));
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) closeLightbox(lb);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox(lb);
+  });
+
+  return lb;
+}
+
+function openLightbox(node) {
+  const lb = createLightbox();
+  const content = lb.querySelector('.lightbox-content');
+  content.innerHTML = '';
+
+  if (node.tagName === 'IMG') {
+    const img = document.createElement('img');
+    img.src = node.src;
+    img.alt = node.alt || '';
+    content.appendChild(img);
+  } else if (node.tagName === 'VIDEO') {
+    const vid = document.createElement('video');
+    vid.controls = true;
+    vid.src = node.querySelector('source') ? node.querySelector('source').src : node.currentSrc || node.src;
+    vid.autoplay = true;
+    content.appendChild(vid);
+  }
+
+  lb.classList.add('open');
+  lb.setAttribute('aria-hidden', 'false');
+}
+
+function closeLightbox(lb) {
+  lb.classList.remove('open');
+  lb.setAttribute('aria-hidden', 'true');
+  const content = lb.querySelector('.lightbox-content');
+  content.innerHTML = '';
+}
+
+document.addEventListener('click', (e) => {
+  const img = e.target.closest('.gallery-grid img');
+  if (img) {
+    openLightbox(img);
+    return;
+  }
+
+  const video = e.target.closest('.gallery-grid video');
+  if (video) {
+    openLightbox(video);
+    return;
+  }
+});
