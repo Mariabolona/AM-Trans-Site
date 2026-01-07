@@ -1580,6 +1580,25 @@ p, span, li { color: var(--navy-muted); }
 
   /* Capabilities responsive */
   .cap-grid { grid-template-columns: 1fr; }
+
+  /* Companies/Testimonials responsive */
+  .companies-grid { grid-template-columns: 1fr; gap: 16px; }
+  .company-card { 
+    flex-direction: column; 
+    text-align: center;
+    min-height: auto;
+    padding: 16px;
+  }
+  .testimonial-image { 
+    width: 140px; 
+    height: 140px; 
+  }
+  .companies-title { font-size: 22px; letter-spacing: 0.02em; margin-bottom: 28px; }
+  .companies-logo { width: 180px; }
+
+  /* Quote video responsive */
+  .quote-video-title { font-size: 32px !important; }
+  .quote-video-text { font-size: 18px !important; }
 }
 
 /* Scroll margin for anchor links to account for fixed header */
