@@ -780,10 +780,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 .cap-card:nth-child(1) .cap-image img {
-  box-shadow: 0 0 20px rgba(0,196,204,0.5);
+  box-shadow: 0 0 20px rgba(138,43,226,0.5);
 }
 
 .cap-card:nth-child(2) .cap-image img {
+  box-shadow: 0 0 20px rgba(138,43,226,0.5);
+}
+
+.cap-card:nth-child(3) .cap-image img {
   box-shadow: 0 0 20px rgba(138,43,226,0.5);
 }
 
@@ -793,6 +797,10 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 8px 0;
   border-radius: 2px;
   background: #fff;
+}
+
+.cap-accent.accent-purple {
+  background: #8a2be2;
 }
 
 .cap-card h4 {
@@ -821,6 +829,72 @@ a { color: inherit; text-decoration: none; }
   font-size: 12.1px;
   line-height: 1.4;
   font-family: 'Gotham', sans-serif;
+}
+
+.cap-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 17.9px;
+  background: linear-gradient(90deg, #72d4ff, #7968ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.cap-explore:hover {
+  transform: translateX(3px);
+  opacity: 0.9;
+}
+
+.cap-explore .arrow {
+  font-size: 21px;
+  line-height: 1;
+}
+
+/* ===== REQUEST RATE QUOTE VIDEO ===== */
+.quote-video-title {
+  margin: 0 0 16px;
+  font-size: 40px !important;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #000000 !important;
+  text-shadow: 
+    0 0 40px rgba(255, 255, 255, 1),
+    0 0 80px rgba(255, 255, 255, 0.9),
+    0 0 120px rgba(255, 255, 255, 0.7);
+}
+
+.quote-video-text {
+  margin: 0 auto 24px !important;
+  max-width: 800px;
+  font-size: 22px !important;
+    font-family: 'Gotham', sans-serif;
+  color: #000000 !important;
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 
+    0 0 30px rgba(255, 255, 255, 1),
+    0 0 60px rgba(255, 255, 255, 0.8);
+}
+
+.quote-video-section .btn.red {
+  background: #021c4d;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#021c4d, #021c4d), linear-gradient(90deg, #72d4ff, #7968ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
 }
 
 /* ===== Sections / Cards ===== */
@@ -881,6 +955,118 @@ p, span, li { color: var(--navy-muted); }
 }
 
 .stat span { opacity: 0.85; font-size: 14px; }
+
+/* ===== Companies ===== */
+.companies {
+  background: linear-gradient(180deg, #021b49 0%, #255ff1 100%);
+  color: #fff;
+}
+
+.companies-head {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.companies-logo {
+  width: 240px;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+}
+
+.companies-title {
+  margin: 6px 0 46px;
+  font-size: 25.9px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #fff;
+  font-family: 'Gotham', sans-serif;
+}
+
+.companies-underline {
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #e11b22;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 560px));
+  gap: 18px;
+  justify-content: center;
+}
+
+.company-card {
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  min-height: 240px;
+  text-align: left;
+}
+
+.company-image {
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.company-text {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.company-card h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  font-family: 'Gotham', sans-serif;
+  background: linear-gradient(90deg, #72d4ff, #7968ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: 100%;
+}
+
+.company-card p {
+  margin: 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: 'Gotham', sans-serif;
+  width: 100%;
+}
+
+/* Text stack for testimonial content */
+.company-card h4,
+.company-card p {
+  flex: 1 1 0;
+}
 
 /* ===== Heavy Haul (own section) ===== */
 .heavyhaul-wrap {
