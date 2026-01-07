@@ -1012,7 +1012,7 @@ p, span, li { color: var(--navy-muted); }
   text-align: left;
 }
 
-.company-image {
+.testimonial-image {
   margin-bottom: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -1025,7 +1025,7 @@ p, span, li { color: var(--navy-muted); }
   justify-content: center;
 }
 
-.company-image img {
+.testimonial-image img {
   width: 100%;
   height: 100%;
   display: block;
