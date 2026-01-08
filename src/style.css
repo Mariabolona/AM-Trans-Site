@@ -2012,12 +2012,6 @@ p, span, li { color: var(--navy-muted); }
   display: inline-block;
 }
 
-.star:nth-child(1) { }
-.star:nth-child(2) { }
-.star:nth-child(3) { }
-.star:nth-child(4) { }
-.star:nth-child(5) { }
-
 /* Button Glow Effect */
 .testimonial-cta {
   transition: all 0.3s ease;
