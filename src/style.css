@@ -1,5 +1,17 @@
 /* ===== Base / Theme ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
 
 :root {
   font-family: 'Gotham', sans-serif;
@@ -520,7 +532,7 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.1);
   color: #fff;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gotham', sans-serif;
 }
 
 .form-group input::placeholder,
@@ -596,7 +608,7 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.1);
   color: #fff;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gotham', sans-serif;
 }
 
 .form-group select option {
@@ -891,7 +903,7 @@ a { color: inherit; text-decoration: none; }
   background-origin: border-box;
   background-clip: padding-box, border-box;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gotham', sans-serif;
   font-weight: 400;
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
