@@ -4,6 +4,55 @@ import "./style.css";
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// ===== Counter Animation =====
+const animateCounter = (element) => {
+  const target = parseInt(element.getAttribute('data-target')) || 100;
+  let current = 0;
+  const increment = target / 50; // Animate over ~50 frames
+  
+  const updateCounter = () => {
+    current += increment;
+    if (current < target) {
+      element.textContent = Math.floor(current);
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = target;
+    }
+  };
+  
+  updateCounter();
+};
+
+// Trigger counter when element comes into view
+const counterElement = document.querySelector('.counter-number');
+if (counterElement) {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  counterObserver.observe(counterElement);
+}
+
+// ===== Parallax Scrolling =====
+window.addEventListener('scroll', () => {
+  const companiesSection = document.querySelector('.companies');
+  if (companiesSection) {
+    const scrollPosition = window.pageYOffset;
+    const sectionPosition = companiesSection.offsetTop;
+    const distance = scrollPosition - sectionPosition;
+    
+    if (distance > -window.innerHeight && distance < companiesSection.offsetHeight) {
+      companiesSection.style.backgroundPosition = `center ${distance * 0.5}px`;
+    }
+  }
+});
+
 // ===== Mobile menu =====
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
