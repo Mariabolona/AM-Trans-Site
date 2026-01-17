@@ -433,6 +433,7 @@ main > section.hero-video .hero-content {
   position: relative;
   overflow: hidden;
   will-change: transform;
+  width: fit-content;
 }
 
 .btn.red {
@@ -2508,6 +2509,9 @@ p, span, li { color: var(--navy-muted); }
   
   .footer-logo {
     height: 44px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
 
   /* Driver section responsive */
@@ -2563,19 +2567,19 @@ p, span, li { color: var(--navy-muted); }
 
 /* Mobile optimizations */
 @media (max-width: 640px) {
+  /* General mobile */
   .announce-bar { font-size: 12px; padding: 8px 16px; }
   .header-row { padding: 12px 0; }
-  
   .container { padding: 0 16px; }
-  
-  .section { padding: 40px 0; }
+  .section { padding: 20px 0; }
   .section h2 { font-size: 28px; }
   
-  .hero-video { min-height: 320px; }
+  /* Hero section */
+  .hero-video { min-height: 380px; }
   .hero-content h1 { font-size: 24px; line-height: 1.2; }
   .hero-sub { font-size: 12px; }
-  .hero-actions { flex-direction: column; gap: 10px; }
-  .btn { padding: 12px 20px; font-size: 12px; }
+  .hero-actions { flex-direction: column; gap: 10px; align-items: center; }
+  .btn { padding: 12px 20px; font-size: 12px; width: fit-content; }
   
   main > section.hero-video .hero-content {
     margin-top: 0;
@@ -2583,9 +2587,10 @@ p, span, li { color: var(--navy-muted); }
   
   .hero-logo {
     max-width: 100px;
-    bottom: 40px;
+    bottom: 50px;
   }
   
+  /* Quote video section */
   .quote-video-title {
     font-size: 28px !important;
   }
@@ -2600,7 +2605,7 @@ p, span, li { color: var(--navy-muted); }
     font-size: 12px;
   }
   
-  /* Grid cards mobile */
+  /* Grid and cards */
   .grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -2611,13 +2616,43 @@ p, span, li { color: var(--navy-muted); }
     border-radius: 12px;
   }
   
-  /* Footer logo mobile */
-  .footer-logo {
-    height: 40px;
-    filter: brightness(1.1);
+  /* Footer */
+  .site-footer {
+    padding: 40px 0 0;
   }
   
-  /* Companies grid mobile */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 0 20px;
+  }
+  
+  .footer-brand {
+    grid-column: auto;
+  }
+  
+  .footer-newsletter {
+    grid-column: auto;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-legal {
+    gap: 16px;
+  }
+  
+  .footer-logo {
+    height: 36px;
+    width: auto;
+    max-width: 100%;
+    filter: brightness(1.1);
+    object-fit: contain;
+  }
+  
+  /* Companies and testimonials */
   .companies-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -2633,6 +2668,19 @@ p, span, li { color: var(--navy-muted); }
     padding: 16px;
   }
   
+  /* Reduce map overlays on mobile */
+  .company-image-wrapper::before {
+    width: 30%;
+    height: 30%;
+    right: -2%;
+  }
+  
+  .company-image-wrapper::after {
+    width: 30%;
+    height: 30%;
+    left: -2%;
+  }
+  
   .testimonial-image {
     width: 140px;
     height: 140px;
@@ -2641,10 +2689,18 @@ p, span, li { color: var(--navy-muted); }
   /* Testimonial cards mobile */
   .testimonial-card {
     max-width: 100%;
-    min-height: auto;
-    padding: 16px;
-    padding-top: 32px;
-    background-size: 100%;
+    min-height: 360px;
+    padding: 20px;
+    padding-left: 32px;
+    padding-top: 28px;
+    padding-bottom: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    gap: 4px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
   }
   
   .testimonial-card:nth-child(2),
@@ -2663,21 +2719,72 @@ p, span, li { color: var(--navy-muted); }
   
   .testimonial-stars {
     gap: 0;
+    margin-bottom: 1px;
   }
   
   .testimonial-title {
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0;
   }
   
   .testimonial-body {
     font-size: 12px;
     line-height: 1.4;
+    word-break: break-word;
+    margin: 0;
   }
   
+  .testimonial-footer {
+    padding-top: 4px;
+    gap: 6px;
+    align-self: end;
+  }
+  
+  .testimonial-info {
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .testimonial-name {
+    font-size: 10px;
+    margin: 0;
+  }
+  
+  .testimonial-location {
+    font-size: 9px;
+    margin: 0;
+  }
+  
+  .testimonial-tag {
+    padding: 2px 8px;
+    font-size: 8px;
+  }
+  
+  .testimonial-cta {
+    font-size: 8px;
+    margin-top: 2px;
+    width: fit-content;
+  }
+  
+  .star {
+    font-size: 12px;
+    position: relative;
+    z-index: 10;
+    margin: 0 -2px;
+    line-height: 1;
+  }
+  
+  /* Stats mobile */
+  .stats { padding: 20px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .stat strong { font-size: 28px; }
+  .stat span { font-size: 12px; }
+  
   /* Driver section mobile */
-  .driver-section {
-    padding-bottom: 100px;
+  .driver-section { 
+    padding-bottom: 40px;
     flex-direction: column;
     margin: 0;
     width: 100%;
@@ -2686,7 +2793,7 @@ p, span, li { color: var(--navy-muted); }
   }
   
   .driver-shaped-image {
-    max-width: 260px;
+    max-width: 220px;
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -2695,67 +2802,56 @@ p, span, li { color: var(--navy-muted); }
   
   .drivers-content {
     text-align: center;
-    gap: 12px;
+    gap: 10px;
   }
   
   .drivers-title {
-    font-size: 24px;
-    margin: 12px 0 0 0;
+    font-size: 22px;
+    margin: 10px 0 0 0;
   }
   
   .drivers-subtitle {
-    font-size: 13px;
+    font-size: 12px;
   }
   
   .drivers-description {
     max-width: 100%;
-    font-size: 13px;
-    margin-top: 12px;
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.4;
   }
   
   .drivers-button-wrapper {
-    position: static;
+    position: relative;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 12px;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-left: 0;
   }
   
   .drivers-cta-btn {
-    padding: 10px 18px;
-    font-size: 12px;
+    padding: 9px 16px;
+    font-size: 11px;
+    width: fit-content;
   }
   
+  /* Companies section mobile */
   .companies { padding-bottom: 40px; }
   .companies-head { margin-bottom: 12px; }
-  .companies-logo { max-width: 60px; }
-  .companies-grid { gap: 12px; grid-template-columns: 1fr; }
-  .testimonial-card { padding: 16px; gap: 8px; min-height: auto; }
-  .testimonial-stars { gap: 0; position: relative; z-index: 10; }
-  .star { font-size: 16px; position: relative; z-index: 10; margin: 0 -3px; line-height: 1; }
-  .testimonial-title { font-size: 14px; line-height: 1.3; }
-  .testimonial-body { font-size: 12px; line-height: 1.4; }
-  .testimonial-footer { padding-top: 8px; gap: 6px; flex-direction: column; align-items: flex-start; }
-  .testimonial-name { font-size: 11px; }
-  .testimonial-location { font-size: 10px; }
-  .testimonial-tag { padding: 3px 8px; font-size: 9px; }
-  .testimonial-cta { font-size: 9px; margin-top: 4px; }
+  .companies-logo { max-width: 80px; }
+  .customers-logo { max-width: 100%; height: auto; margin: 0 auto 20px; }
+  .customers-stat { font-size: 14px; margin-bottom: 20px; }
   
-  /* Stats mobile */
-  .stats { padding: 40px 0; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .stat strong { font-size: 28px; }
-  .stat span { font-size: 12px; }
-  
-  /* Driver section mobile */
-  .driver-section { padding-bottom: 100px; flex-direction: column; margin: 0; width: 100%; }
-  .driver-shaped-image { max-width: 260px; width: 100%; height: auto; margin: 0 auto; }
-  .drivers-title { font-size: 24px; }
-  .drivers-subtitle { font-size: 13px; }
-  .drivers-description { max-width: 100%; font-size: 13px; margin-top: 12px; }
-  .drivers-button-wrapper { position: static; text-align: center; margin-top: 16px; }
-  .drivers-cta-btn { padding: 10px 18px; font-size: 12px; }
+  /* Services section mobile */
+  .services-lanes { grid-template-columns: 1fr; }
+  .flow-steps { grid-template-columns: 1fr; }
+  .flow-arrow { display: none; }
+  .services-cta { flex-direction: column; align-items: center; gap: 12px; }
   
   /* Featured news section mobile */
-  .featured-news-section { padding: 40px 0 !important; overflow: hidden; }
+  .featured-news-section { padding: 20px 0 !important; overflow: hidden; }
   .featured-divider { gap: 12px; margin-bottom: 32px; }
   .featured-divider h3 { font-size: 20px; }
   .featured-divider .line { display: none; }
@@ -2768,35 +2864,51 @@ p, span, li { color: var(--navy-muted); }
   .featured-news-section::before { display: none; }
   .featured-news-section::after { display: none; }
   
+  /* Heavy haul section mobile */
+  .heavyhaul-wrap { grid-template-columns: 1fr; }
+  .heavyhaul-visual img { min-height: 240px; max-width: 100%; }
+  
+  /* Capabilities section mobile */
+  .cap-grid { grid-template-columns: 1fr; }
+  .cap-card { padding: 12px; }
+  .cap-card h4 { font-size: 14px; }
+  .cap-card h5 { font-size: 11px; }
+  .cap-card p { font-size: 11px; }
+  
+  /* Drivers page sections mobile */
+  .drivers-bullets { grid-template-columns: 1fr; }
+  .drivers-split { grid-template-columns: 1fr; }
+  .drivers-hero-split { grid-template-columns: 1fr; }
+  .drivers-hero-media img { max-width: 100%; margin-top: 12px; }
+  
   /* Background ribbons - responsive for mobile */
   body::before { height: 60vh; width: 120%; }
   body::after { width: 35%; height: 60vh; right: -25vw; }
   
   .clients-logo { max-width: 100%; }
-  .customers-stat { font-size: 12px; margin-bottom: 16px; }
   .client-testimonials-title { font-size: 14px; gap: 4px; }
   .client-testimonials-line { min-width: 8px; flex: 0.1; }
 }
 
 /* Extra small screens */
 @media (max-width: 480px) {
-  .section { padding: 32px 0; }
+  .section { padding: 16px 0; }
   .container { width: 100%; padding: 0 12px; }
   .announce-bar { font-size: 11px; padding: 6px 12px; }
   .header-row { gap: 8px; padding: 8px 0; }
   .brand img { height: 40px; }
   
-  .hero-video { min-height: 240px; }
+  .hero-video { min-height: 300px; }
   .hero-content { padding: 32px 0 50px; }
   .hero-content h1 { font-size: 18px; }
   .hero-sub { font-size: 10px; }
   
   .hero-logo {
     max-width: 80px;
-    bottom: 30px;
+    bottom: 45px;
   }
   
-  .btn { padding: 8px 14px; font-size: 10px; }
+  .btn { padding: 8px 14px; font-size: 10px; width: fit-content; }
   .btn.primary { font-size: 9px; }
   
   .grid {
@@ -2817,7 +2929,7 @@ p, span, li { color: var(--navy-muted); }
   /* Featured news mobile extra small */
   .featured-card { min-height: 240px; }
   .featured-image img { aspect-ratio: 16/10; }
-  .featured-news-section { padding: 30px 0 !important; }
+  .featured-news-section { padding: 16px 0 !important; }
   body::before { height: 50vh; }
   body::after { width: 40%; height: 50vh; }
   
@@ -2833,7 +2945,16 @@ p, span, li { color: var(--navy-muted); }
   
   /* Footer mobile */
   .footer-logo {
-    height: 32px;
+    height: 28px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .customers-logo {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 16px;
   }
   
   .footer-section h4 {
@@ -2843,10 +2964,17 @@ p, span, li { color: var(--navy-muted); }
   /* Testimonial cards extra small */
   .testimonial-card {
     padding: 12px;
-    padding-top: 24px;
-    min-height: auto;
+    padding-left: 20px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    min-height: 300px;
     max-width: 100%;
-    background-size: 100%;
+    background-size: contain;
+    background-position: top center;
+    gap: 2px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
   }
   
   .testimonial-card:nth-child(2),
@@ -2856,11 +2984,18 @@ p, span, li { color: var(--navy-muted); }
   
   .testimonial-stars {
     gap: 0;
+    margin-bottom: 2px;
   }
   
-  .testimonial-title { font-size: 11px; line-height: 1.2; }
-  .testimonial-body { font-size: 11px; line-height: 1.3; }
-  .star { font-size: 13px; margin: 0 -2px; }
+  .testimonial-title { font-size: 10px; line-height: 1.2; font-weight: 700; word-break: break-word; margin: 0; }
+  .testimonial-body { font-size: 8px; line-height: 1.3; word-break: break-word; margin: 0; }
+  .star { font-size: 11px; margin: 0 -1px; }
+  .testimonial-footer { margin-top: 0; padding-top: 2px; gap: 3px; flex-wrap: wrap; align-self: end; }
+  .testimonial-info { flex-direction: row; gap: 3px; }
+  .testimonial-name { font-size: 7px; margin: 0; }
+  .testimonial-location { font-size: 6px; margin: 0; }
+  .testimonial-tag { padding: 1px 3px; font-size: 6px; }
+  .testimonial-cta { font-size: 6px; width: fit-content; }
   
   /* Companies extra small */
   .companies-grid {
@@ -2874,6 +3009,19 @@ p, span, li { color: var(--navy-muted); }
     flex-direction: column;
     text-align: center;
     min-height: auto;
+  }
+  
+  /* Reduce map overlays on extra small mobile */
+  .company-image-wrapper::before {
+    width: 25%;
+    height: 25%;
+    right: 0;
+  }
+  
+  .company-image-wrapper::after {
+    width: 25%;
+    height: 25%;
+    left: 0;
   }
   
   .testimonial-image {
