@@ -103,6 +103,55 @@ const io = new IntersectionObserver(
 
 revealEls.forEach((el) => io.observe(el));
 
+// ===== Staggered Fade-in Animation =====
+const staggerItems = document.querySelectorAll('.stagger-item');
+const staggerObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+        entry.target.classList.add('animate');
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+staggerItems.forEach((el) => staggerObserver.observe(el));
+
+// ===== Scale-up Animation =====
+const scaleUpItems = document.querySelectorAll('.scale-up-item');
+const scaleUpObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+        entry.target.classList.add('animate');
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+scaleUpItems.forEach((el) => scaleUpObserver.observe(el));
+
+// ===== Parallax Text Animation =====
+const parallaxTexts = document.querySelectorAll('.parallax-text');
+if (parallaxTexts.length > 0) {
+  window.addEventListener('scroll', () => {
+    parallaxTexts.forEach((element) => {
+      const scrollPosition = window.pageYOffset;
+      const elementPosition = element.offsetTop;
+      const elementHeight = element.offsetHeight;
+      const windowHeight = window.innerHeight;
+      
+      // Only apply parallax when element is in viewport
+      if (scrollPosition + windowHeight > elementPosition && scrollPosition < elementPosition + elementHeight) {
+        const offset = (scrollPosition - elementPosition) * 0.3;
+        element.style.transform = `translateY(${offset}px)`;
+      }
+    });
+  });
+}
+
 // ===== Map overlay scroll animation =====
 const mapWrapper = document.querySelector('.company-image-wrapper');
 if (mapWrapper) {
