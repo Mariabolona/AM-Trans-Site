@@ -285,3 +285,45 @@ document.addEventListener('click', (e) => {
     return;
   }
 });
+
+// ===== Back to Top Button =====
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// ===== Form Validation & Feedback =====
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = newsletterForm.querySelector('input[type="email"]');
+    
+    if (input.checkValidity()) {
+      // Show success feedback (you can enhance this with a toast notification)
+      const btn = newsletterForm.querySelector('button');
+      const originalText = btn.textContent;
+      btn.textContent = '✓ Subscribed!';
+      btn.style.background = 'linear-gradient(135deg, #4cd353, #72d4ff)';
+      
+      // Reset after 2 seconds
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        input.value = '';
+      }, 2000);
+    }
+  });
+}
