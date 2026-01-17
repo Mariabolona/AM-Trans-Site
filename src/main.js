@@ -103,6 +103,23 @@ const io = new IntersectionObserver(
 
 revealEls.forEach((el) => io.observe(el));
 
+// ===== Map overlay scroll animation =====
+const mapWrapper = document.querySelector('.company-image-wrapper');
+if (mapWrapper) {
+  const mapObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+          entry.target.classList.add('visible');
+          mapObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+  mapObserver.observe(mapWrapper);
+}
+
 // ===== Stats counter animation =====
 function animateCount(el) {
   const target = Number(el.getAttribute("data-count") || "0");
