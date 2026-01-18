@@ -1055,13 +1055,13 @@ main > section.hero-video .hero-content {
 .company-image-wrapper::after {
   content: '';
   position: absolute;
-  bottom: -600px;
   left: 0;
+  bottom: 0;
   width: 50%;
   height: 50%;
   background-image: url('/map2.png');
   background-size: contain;
-  background-position: center;
+  background-position: left bottom;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 2.5s ease-in 0.4s, transform 0.3s ease, filter 0.3s ease;
@@ -3167,6 +3167,14 @@ min-height: auto;
   .featured-explore { font-size: 12px; }
   .featured-news-section::before { display: none; }
   .featured-news-section::after { display: none; }
+
+  /* Make experience box more mobile-friendly */
+  .experience-box {
+    max-width: 100% !important;
+    padding: 18px 16px !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+  }
   
   /* Heavy haul section mobile */
   .heavyhaul-wrap { grid-template-columns: 1fr; }
