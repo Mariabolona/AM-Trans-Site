@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Request a Rate Quote | AM Trans</title>
+    <link rel="stylesheet" href="/src/style.css" />
     <link rel="icon" href="/am-trans-logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="/am-trans-logo.png" />
   </head>
@@ -29,7 +30,6 @@
               </button>
               <div class="nav-menu" role="menu" aria-label="Our company menu">
                 <a role="menuitem" href="/about-amtrans.html">About AmTrans</a>
-                <a role="menuitem" href="/#about">Overview</a>
               </div>
             </div>
 
@@ -39,7 +39,6 @@
                 Services <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Services menu">
-                <a role="menuitem" href="/#heavy-haul">Heavy Haul</a>
                 <a role="menuitem" href="/rate-quote.html">Request a Rate Quote</a>
               </div>
             </div>
@@ -50,7 +49,6 @@
                 Drivers <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Drivers menu">
-                <a role="menuitem" href="/#drivers">Overview</a>
                 <a role="menuitem" href="/driver-application.html">Driver Application</a>
               </div>
             </div>
@@ -62,7 +60,6 @@
               </button>
               <div class="nav-menu" role="menu" aria-label="Resources menu">
                 <a role="menuitem" href="/resources-gallery.html">Photo &amp; Video Gallery</a>
-                <a role="menuitem" href="/#resources">Overview</a>
               </div>
             </div>
 
@@ -72,7 +69,6 @@
                 Contact <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Contact menu">
-                <a role="menuitem" href="/#contact">Overview</a>
                 <a role="menuitem" href="/contact-us.html">Contact Us</a>
               </div>
             </div>
@@ -111,7 +107,6 @@
                 Services <span aria-hidden="true">▾</span>
               </button>
               <div class="mobile-submenu">
-                <a href="/#heavy-haul">Heavy Haul</a>
                 <a href="/rate-quote.html">Request a Rate Quote</a>
               </div>
             </div>
@@ -148,13 +143,15 @@
             <a href="/rate-quote.html" class="cta-pill mobile-cta">Request a Quote</a>
           </div>
         </div>
-        </div>
       </div>
     </header>
 
     <main>
       <!-- Quote Hero -->
       <section class="hero-video reveal">
+        <video autoplay muted loop class="hero-bg">
+          <source src="/request-quote.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
 
         <div class="container hero-content hero-center">
@@ -169,9 +166,6 @@
       <section class="section reveal">
         <div class="container section-head">
           <h2>Why Choose AM Trans for Your Heavy Haul Needs?</h2>
-          <p class="section-sub">
-            With over 20 years of experience in oversized and specialized transport, AM Trans delivers reliable, efficient solutions for businesses of all sizes. From single loads to complex multi-lane projects, we handle it all with precision and care.
-          </p>
         </div>
 
         <div class="container">
@@ -205,7 +199,7 @@
           <div class="grid">
             <div class="card">
               <h4>1. Quick Response</h4>
-              <p>Within 24 hours of your submission, our team will review your details and contact you for any clarifications.</p>
+              <p>Within 48 hours of your submission, our team will review your details and contact you for any clarifications.</p>
             </div>
             <div class="card">
               <h4>2. Detailed Assessment</h4>
@@ -225,7 +219,7 @@
           <h2>Request Your Quote</h2>
           <p>Fill out the form below with as many details as possible. The more information you provide, the more accurate our quote will be.</p>
 
-          <form action="mailto:maria_bolona@yahoo.com" method="post" enctype="text/plain" class="quote-form">
+          <form action="https://formspree.io/f/xzddewlw" method="POST" class="quote-form">
             <div class="form-section">
               <h3>Contact Information</h3>
               <div class="form-group">
@@ -340,9 +334,81 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> AM Trans. All rights reserved.</p>
+        <div class="footer-content">
+          <!-- Logo & About -->
+          <div class="footer-section footer-brand">
+            <img src="/grey-logo.png" alt="AM Trans" class="footer-logo" />
+            <p class="footer-tagline">Dependable Heavy Haul & Specialized Transport Solutions</p>
+            <div class="footer-socials">
+              <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank">in</a>
+              <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank">f</a>
+              <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank">𝕏</a>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="/our-services.html">Heavy Haul Transport</a></li>
+              <li><a href="/our-services.html">Specialized Rigging</a></li>
+              <li><a href="/our-services.html">Permitting & Planning</a></li>
+              <li><a href="/our-services.html">Equipment Rental</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul class="footer-links">
+              <li><a href="/about-amtrans.html">About Us</a></li>
+              <li><a href="/driver-application.html">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Safety Standards</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="tel:+1234567890">+1 (234) 567-8900</a></li>
+              <li><a href="mailto:info@amtrans.com">info@amtrans.com</a></li>
+              <li><a href="/contact-us.html">Contact Form</a></li>
+              <li><a href="#">Service Area</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p class="newsletter-text">Get industry insights and updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> AM Trans. All rights reserved.</p>
+          <ul class="footer-legal">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <span>↑</span>
+    </button>
 
     <script type="module" src="/src/main.js"></script>
   </body>

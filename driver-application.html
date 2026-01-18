@@ -29,7 +29,6 @@
               </button>
               <div class="nav-menu" role="menu" aria-label="Our company menu">
                 <a role="menuitem" href="/about-amtrans.html">About AmTrans</a>
-                <a role="menuitem" href="/#about">Overview</a>
               </div>
             </div>
 
@@ -39,7 +38,6 @@
                 Services <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Services menu">
-                <a role="menuitem" href="/#heavy-haul">Heavy Haul</a>
                 <a role="menuitem" href="/rate-quote.html">Request a Rate Quote</a>
               </div>
             </div>
@@ -50,7 +48,6 @@
                 Drivers <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Drivers menu">
-                <a role="menuitem" href="/#drivers">Overview</a>
                 <a role="menuitem" href="/driver-application.html">Driver Application</a>
               </div>
             </div>
@@ -62,7 +59,6 @@
               </button>
               <div class="nav-menu" role="menu" aria-label="Resources menu">
                 <a role="menuitem" href="/resources-gallery.html">Photo &amp; Video Gallery</a>
-                <a role="menuitem" href="/#resources">Overview</a>
               </div>
             </div>
 
@@ -72,7 +68,6 @@
                 Contact <span aria-hidden="true">▾</span>
               </button>
               <div class="nav-menu" role="menu" aria-label="Contact menu">
-                <a role="menuitem" href="/#contact">Overview</a>
                 <a role="menuitem" href="/contact-us.html">Contact Us</a>
               </div>
             </div>
@@ -111,7 +106,6 @@
                 Services <span aria-hidden="true">▾</span>
               </button>
               <div class="mobile-submenu">
-                <a href="/#heavy-haul">Heavy Haul</a>
                 <a href="/rate-quote.html">Request a Rate Quote</a>
               </div>
             </div>
@@ -174,22 +168,187 @@
             <li>Competitive salary and bonuses</li>
             <li>Health, dental, and vision insurance</li>
             <li>Paid time off and holidays</li>
-            <li>Retirement plan with company match</li>
-            <li>Ongoing training and development</li>
           </ul>
+        </div>
+      </section>
 
-          <div class="company-cta">
-            <a class="btn red" href="mailto:careers@amtrans.com?subject=Driver Application">Apply Now</a>
-          </div>
+      <!-- Application Form -->
+      <section class="section">
+        <div class="container">
+          <h2>Apply Now</h2>
+          <form action="https://formspree.io/f/xojjebgo" method="POST" class="quote-form">
+            <div class="form-section">
+              <h3>Personal Information</h3>
+              <div class="form-group">
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>CDL Information</h3>
+              <div class="form-group">
+                <label for="cdl_number">CDL Number *</label>
+                <input type="text" id="cdl_number" name="cdl_number" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cdl_expiration">CDL Expiration Date *</label>
+                <input type="date" id="cdl_expiration" name="cdl_expiration" required>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Driving Experience</h3>
+              <div class="form-group">
+                <label for="experience_years">Years of Driving Experience *</label>
+                <input type="number" id="experience_years" name="experience_years" min="0" required>
+              </div>
+
+              <div class="form-group">
+                <label>Heavy Haul Experience *</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="heavy_haul_exp" value="Yes" required> Yes</label>
+                  <label><input type="radio" name="heavy_haul_exp" value="No" required> No</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Equipment Experience</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="equipment" value="Flatbed"> Flatbed</label>
+                  <label><input type="checkbox" name="equipment" value="Lowboy"> Lowboy</label>
+                  <label><input type="checkbox" name="equipment" value="Step Deck"> Step Deck</label>
+                  <label><input type="checkbox" name="equipment" value="Heavy Haul"> Heavy Haul</label>
+                  <label><input type="checkbox" name="equipment" value="Other"> Other</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Previous Employment</h3>
+              <div class="form-group">
+                <label for="last_job_title">Last Job Title</label>
+                <input type="text" id="last_job_title" name="last_job_title">
+              </div>
+
+              <div class="form-group">
+                <label for="date_hired">Date Hired</label>
+                <input type="date" id="date_hired" name="date_hired">
+              </div>
+
+              <div class="form-group">
+                <label for="date_ended">Date Ended</label>
+                <input type="date" id="date_ended" name="date_ended">
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Additional Information</h3>
+              <div class="form-group">
+                <label for="message">Additional Information</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="resume">Upload Resume/References (Optional)</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.txt" />
+              </div>
+            </div>
+
+            <button type="submit" class="btn red">Submit Application</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; 2024 AM Trans. All rights reserved.</p>
+        <div class="footer-content">
+          <!-- Logo & About -->
+          <div class="footer-section footer-brand">
+            <img src="/grey-logo.png" alt="AM Trans" class="footer-logo" />
+            <p class="footer-tagline">Dependable Heavy Haul & Specialized Transport Solutions</p>
+            <div class="footer-socials">
+              <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank">in</a>
+              <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank">f</a>
+              <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank">𝕏</a>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="/our-services.html">Heavy Haul Transport</a></li>
+              <li><a href="/our-services.html">Specialized Rigging</a></li>
+              <li><a href="/our-services.html">Permitting & Planning</a></li>
+              <li><a href="/our-services.html">Equipment Rental</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul class="footer-links">
+              <li><a href="/about-amtrans.html">About Us</a></li>
+              <li><a href="/driver-application.html">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Safety Standards</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="tel:+1234567890">+1 (234) 567-8900</a></li>
+              <li><a href="mailto:info@amtrans.com">info@amtrans.com</a></li>
+              <li><a href="/contact-us.html">Contact Form</a></li>
+              <li><a href="#">Service Area</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p class="newsletter-text">Get industry insights and updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> AM Trans. All rights reserved.</p>
+          <ul class="footer-legal">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <span>↑</span>
+    </button>
 
     <script src="/src/main.js"></script>
   </body>
