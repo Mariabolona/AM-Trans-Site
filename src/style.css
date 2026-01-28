@@ -175,6 +175,8 @@ a { color: inherit; text-decoration: none; }
   border: 0;
   cursor: pointer;
   font: inherit;
+  font-weight: 400 !important;
+  text-transform: uppercase;
   line-height: 1;
 }
 
@@ -214,7 +216,8 @@ a { color: inherit; text-decoration: none; }
   padding: 10px 10px;
   border-radius: 12px;
   color: rgba(255,255,255,0.92);
-  font-weight: 800;
+  font-weight: 400;
+  text-transform: uppercase;
   font-size: 13px;
 }
 
@@ -237,10 +240,11 @@ a { color: inherit; text-decoration: none; }
 .cta-pill {
   padding: 10px 14px;
   border-radius: 999px;
-  font-weight: 800;
-  background: #fff;
-  color: var(--navy-main);
-  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #848489, #d6d2e1, #a2a2a2, #d6d2e1, #858489);
+  color: #e11b22;
+  border: 2px solid #e11b22;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
@@ -381,7 +385,7 @@ main > section.hero-video .hero-content {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.10);
   z-index: 1;
 }
 
@@ -437,14 +441,14 @@ main > section.hero-video .hero-content {
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 12px 18px;
-  border-radius: 14px;
+  padding: 14px 32px;
+  border-radius: 999px;
   font-weight: 800;
   border: 1px solid rgba(255,255,255,0.35);
   letter-spacing: 0.02em;
@@ -565,7 +569,7 @@ main > section.hero-video .hero-content {
 .company-single {
   padding: 80px 0 80px;
   background: radial-gradient(1000px 420px at 25% 18%, rgba(255,255,255,0.04), transparent 50%),
-              linear-gradient(180deg, var(--navy-main) 0%, var(--navy-dark) 100%);
+              linear-gradient(180deg, #021C4D 0%, #021C4D 100%);
   color: #fff;
   border-top: 1px solid rgba(255,255,255,0.02);
 }
@@ -1288,16 +1292,15 @@ main > section.hero-video .hero-content {
 .featured-news-section::after {
   content: '';
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 900px;
-  z-index: 2;
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.85;
-  display: block;
+  left: -10%;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 700px;
+  background-image: url('/left-octagons.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   pointer-events: none;
   z-index: 0;
 }
@@ -1514,24 +1517,11 @@ main > section.hero-video.quote-video-section .hero-content {
   color: #000000 !important;
   font-weight: 400;
   line-height: 1.5;
-  text-shadow: none;
+  text-shadow: 2px 1px 0 rgba(0,0,0,0.18);
   position: relative;
   z-index: 1;
 }
 
-.quote-video-text::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 3.5em;
-  height: 3.5em;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.7) 70%, rgba(255,255,255,0.10) 100%);
-  filter: blur(14px);
-  z-index: -1;
-  pointer-events: none;
-}
 
 
 .quote-video-section .btn.red {
@@ -2512,7 +2502,7 @@ p, span, li { color: var(--navy-muted); }
 }
 
 .footer-logo {
-  height: 48px;
+  height: 64px;
   width: auto;
   max-width: 100%;
   display: block;
@@ -3201,8 +3191,6 @@ min-height: auto;
   .featured-card h5 { font-size: 12px; }
   .featured-card p { font-size: 12px; }
   .featured-explore { font-size: 12px; }
-  .featured-news-section::before { display: none; }
-  .featured-news-section::after { display: none; }
   
   /* Heavy haul section mobile */
   .heavyhaul-wrap { grid-template-columns: 1fr; }
