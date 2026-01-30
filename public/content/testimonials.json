@@ -1,0 +1,18 @@
+{
+  "testimonials": [
+    {
+      "name": "Jane Smith",
+      "city": "Chicago",
+      "industryTag": "Retail",
+      "quoteTitle": "Reliable Service",
+      "quoteBody": "AM Trans always delivers on time and with great care."
+    },
+    {
+      "name": "Carlos Rivera",
+      "city": "Dallas",
+      "industryTag": "Manufacturing",
+      "quoteTitle": "Professional Team",
+      "quoteBody": "Their drivers are courteous and professional. Highly recommended!"
+    }
+  ]
+}

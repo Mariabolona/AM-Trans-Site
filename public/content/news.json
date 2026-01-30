@@ -1,0 +1,16 @@
+{
+  "news": [
+    {
+      "title": "AM Trans Expands Fleet",
+      "excerpt": "We have added 10 new trucks to better serve our clients.",
+      "link": "/news/expands-fleet.html",
+      "imageSrc": "/images/news-fleet.jpg"
+    },
+    {
+      "title": "Awarded Best Carrier 2025",
+      "excerpt": "Proud to be recognized as the region's top carrier for 2025.",
+      "link": "/news/best-carrier-2025.html",
+      "imageSrc": "/images/news-award.jpg"
+    }
+  ]
+}

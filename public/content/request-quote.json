@@ -1,0 +1,7 @@
+{
+  "title": "Request a Quote",
+  "body": "Fill out our quick form to get a personalized rate quote for your shipment.",
+  "buttonLabel": "Request Now",
+  "buttonLink": "/rate-quote.html",
+  "backgroundImageSrc": "/images/quote-bg.jpg"
+}

@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "/public/uploads"
+publish_mode: editorial_workflow
+collections:
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - file: "public/content/hero.json"
+        label: "Hero Content"
+        name: "hero_content"
+        fields:
+          - { label: "Hero Video MP4", name: "heroVideoSrc", widget: "string", required: false }
+          - { label: "Hero Poster Image", name: "heroImageFallback", widget: "string", required: false }
+          - { label: "CTA1 Label", name: "cta1Label", widget: "string" }
+          - { label: "CTA1 Link", name: "cta1Link", widget: "string" }
+          - { label: "CTA2 Label", name: "cta2Label", widget: "string", required: false }
+          - { label: "CTA2 Link", name: "cta2Link", widget: "string", required: false }
+  - name: "request_quote"
+    label: "Request Quote Section"
+    files:
+      - file: "public/content/request-quote.json"
+        label: "Request Quote Content"
+        name: "request_quote_content"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+          - { label: "Button Label", name: "buttonLabel", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Background Image Src", name: "backgroundImageSrc", widget: "string", required: false }
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - file: "public/content/testimonials.json"
+        label: "Testimonials List"
+        name: "testimonials_list"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Industry Tag", name: "industryTag", widget: "string" }
+              - { label: "Quote Title", name: "quoteTitle", widget: "string" }
+              - { label: "Quote Body", name: "quoteBody", widget: "text" }
+  - name: "news"
+    label: "News"
+    files:
+      - file: "public/content/news.json"
+        label: "News List"
+        name: "news_list"
+        fields:
+          - label: "News Items"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Image Src", name: "imageSrc", widget: "string", required: false }

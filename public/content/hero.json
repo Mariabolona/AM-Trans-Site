@@ -1,0 +1,8 @@
+{
+  "heroVideoSrc": "/videos/hero.mp4",
+  "heroImageFallback": "/images/hero-fallback.jpg",
+  "cta1Label": "Get a Quote",
+  "cta1Link": "/rate-quote.html",
+  "cta2Label": "Contact Us",
+  "cta2Link": "/contact-us.html"
+}
